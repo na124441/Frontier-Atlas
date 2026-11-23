@@ -1,0 +1,36 @@
+rules:
+  startup:
+    required_fields:
+      - entityName
+    selectors:
+      company_name: ["h1", ".company-name", "meta[property='og:title']"]
+      employee_count: [".employee-count", ".team-size", "span:contains('employees')"]
+
+  product:
+    required_fields:
+      - startupName
+      - pricingModel
+    default_pricing: FREEMIUM
+
+  research_paper:
+    required_fields:
+      - title
+      - authors
+      - paper_url
+      - published_date
+    github_link_pattern: "github\\.com/([\\w-]+)/([\\w-]+)"
+
+  job:
+    required_fields:
+      - company
+      - role_family
+      - date
+    freshness_window_hours: 24
+
+  news:
+    required_fields:
+      - title
+      - article_url
+      - full_text
+      - published_date
+    freshness_window_hours: 24

@@ -1,0 +1,134 @@
+sources:
+  # 1. Startup Directories
+  - name: ycombinator_ai
+    category: startup_directory
+    base_url: https://www.ycombinator.com/companies?category=AI
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://www.ycombinator.com/companies?category=AI
+
+  - name: ai_startup_index
+    category: startup_directory
+    base_url: https://raw.githubusercontent.com/ai-startups-index/registry/main/startups.json
+    strategy: http
+    rate_limit_delay: 0.5
+    start_urls:
+      - https://raw.githubusercontent.com/ai-startups-index/registry/main/startups.json
+
+  # 2. Product Directories
+  - name: futurepedia
+    category: product_directory
+    base_url: https://www.futurepedia.io
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://www.futurepedia.io
+
+  - name: aitools_directory
+    category: product_directory
+    base_url: https://theresanaiforthat.com
+    strategy: browser
+    rate_limit_delay: 1.5
+    start_urls:
+      - https://theresanaiforthat.com
+
+  # 3. Research Paper Repositories
+  - name: arxiv_ai
+    category: research_repository
+    base_url: https://arxiv.org/list/cs.AI/recent
+    strategy: http
+    rate_limit_delay: 2.0
+    start_urls:
+      - https://arxiv.org/list/cs.AI/recent
+      - https://arxiv.org/list/cs.LG/recent
+
+  - name: papers_with_code
+    category: research_repository
+    base_url: https://paperswithcode.com
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://paperswithcode.com/latest
+
+  # 4. Five Distinct AI News Sources (SRS FR-06)
+  - name: techcrunch_ai
+    category: news_website
+    base_url: https://techcrunch.com/category/artificial-intelligence/
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://techcrunch.com/category/artificial-intelligence/
+
+  - name: venturebeat_ai
+    category: news_website
+    base_url: https://venturebeat.com/category/ai/
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://venturebeat.com/category/ai/
+
+  - name: mit_tech_review_ai
+    category: news_website
+    base_url: https://www.technologyreview.com/topic/artificial-intelligence/
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://www.technologyreview.com/topic/artificial-intelligence/
+
+  - name: the_verge_ai
+    category: news_website
+    base_url: https://www.theverge.com/ai-artificial-intelligence
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://www.theverge.com/ai-artificial-intelligence
+
+  - name: arstechnica_ai
+    category: news_website
+    base_url: https://arstechnica.com/information-technology/
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://arstechnica.com/information-technology/
+
+  # 5. Five Distinct AI Job Boards (SRS FR-06)
+  - name: ai_jobs_net
+    category: job_board
+    base_url: https://ai-jobs.net
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://ai-jobs.net
+
+  - name: remotive_ai
+    category: job_board
+    base_url: https://remotive.com/remote-jobs/software-dev
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://remotive.com/remote-jobs/software-dev
+
+  - name: wellfound_ai
+    category: job_board
+    base_url: https://wellfound.com/role/l/artificial-intelligence
+    strategy: browser
+    rate_limit_delay: 1.5
+    start_urls:
+      - https://wellfound.com/role/l/artificial-intelligence
+
+  - name: yc_jobs
+    category: job_board
+    base_url: https://www.workatastartup.com/companies?demographic=any&industry=Artificial+Intelligence
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://www.workatastartup.com/companies?demographic=any&industry=Artificial+Intelligence
+
+  - name: hacker_news_hiring
+    category: job_board
+    base_url: https://news.ycombinator.com/jobs
+    strategy: http
+    rate_limit_delay: 1.0
+    start_urls:
+      - https://news.ycombinator.com/jobs

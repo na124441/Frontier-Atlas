@@ -1,0 +1,46 @@
+[build-system]
+requires = ["setuptools>=61.0"]
+build-backend = "setuptools.build_meta"
+
+[project]
+name = "intelligent-web-scraper"
+version = "1.0.0"
+description = "Intelligent Web Scraping & AI-Powered Data Intelligence Platform"
+readme = "README.md"
+requires-python = ">=3.12"
+dependencies = [
+    "aiohttp>=3.9.0",
+    "playwright>=1.40.0",
+    "beautifulsoup4>=4.12.0",
+    "selectolax>=0.3.17",
+    "pydantic>=2.5.0",
+    "pydantic-settings>=2.1.0",
+    "pyyaml>=6.0.1",
+    "python-dateutil>=2.8.2",
+    "sqlalchemy>=2.0.25",
+    "asyncpg>=0.29.0",
+    "aiosqlite>=0.19.0",
+    "redis>=5.0.0",
+    "google-genai>=0.1.1",
+    "google-generativeai>=0.8.0",
+    "groq>=0.9.0",
+    "openai>=1.12.0",
+    "gspread>=6.0.0",
+    "google-auth>=2.27.0",
+    "pandas>=2.2.0",
+    "rich>=13.0.0"
+]
+
+[project.scripts]
+scraper = "intelligent_scraper.main:main"
+scraper-cli = "intelligent_scraper.cli:main"
+
+[tool.setuptools.packages.find]
+where = ["src"]
+
+[tool.pytest.ini_options]
+pythonpath = ["src"]
+asyncio_mode = "auto"
+asyncio_default_fixture_loop_scope = "function"
+testpaths = ["tests"]
+python_files = ["test_*.py"]
